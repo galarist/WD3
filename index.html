@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="functions.js"></script>
+    <title>Registration</title>
+</head>
+
+<body>
+    <form onsubmit="return validation()">
+        <hr>
+        <h1>Registration</h1>
+        <hr>
+        <fieldset>
+            <legend>Details</legend>
+            <section>
+                <input oninput="validation()" id="fname" type="text" pattern="[A-Za-z]{2,}" required>
+                <label for="fname">First Name</label>
+            </section>
+            <section>
+                <input oninput="validation()" id="lname" type="text" pattern="[A-Za-z]{2,}" required>
+                <label for="lname">Last Name</label>
+            </section>
+            <section>
+                <input oninput="validation()" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    required>
+                <label for="email">Email</label>
+                <div id="errorEmail"></div>
+            </section>
+            <section>
+                <input oninput="validation()" id="vEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    required>
+                <label for="vEmail">Verify Email</label>
+            </section>
+            <section>
+                <input oninput="validation()" id="password" type="password" autocomplete="off"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    required>
+                <label for="password">Password</label>
+                <div id="checkPW"></div>
+            </section>
+            <section>
+                <input oninput="validation()" id="vPassword" type="password" autocomplete="off"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    required>
+                <label for="vPassword">Verify Password</label>
+                <div id="verifyPassword"></div>
+            </section>
+            <section class="inline_grid">
+                <input type="checkbox" name="accept" id="accept" required>
+                <label for="accept">Accept Terms</label>
+            </section>
+            <input type="submit" value="Register">
+        </fieldset>
+    </form>
+</body>
+
+</html>

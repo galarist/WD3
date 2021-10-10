@@ -1,0 +1,70 @@
+form {
+    margin: 0 auto;
+    width: 260px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 2px solid rgba(99, 99, 99, 0.2);;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    border-color: rgba(99, 99, 99, 0.2);
+}
+
+fieldset {
+    display: inline-grid;
+    display: -ms-inline-grid;
+    width: 88%;
+    border-color: rgba(99, 99, 99, 0.2);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+legend {
+    text-align: center;
+    font-size: 16pt;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-decoration-color: rgba(99, 99, 99, 0.2);
+}
+
+section {
+    display: grid;
+    display: -ms-grid;
+    grid-auto-flow: dense;
+}
+
+section label {
+    grid-row: 1;
+}
+
+input {
+    margin: 18px 0;
+}
+
+input[type="submit"] {
+    height: 35px;
+    border: 0;
+    width: 160px;
+    margin: 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.inline_grid {
+    display: inline-grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-template-rows: 35px;
+}
+
+input:required+label::after {
+    content: " *";
+    color: red;
+}
+
+@media (orientation: landscape) {}
