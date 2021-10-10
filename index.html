@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="functions.js"></script>
     <title>Registration</title>
@@ -20,10 +21,12 @@
             <section>
                 <input oninput="validation()" id="fname" type="text" pattern="[A-Za-z]{2,}" required>
                 <label for="fname">First Name</label>
+                <div id="errorFname"></div>
             </section>
             <section>
-                <input oninput="validation()" id="lname" type="text" pattern="[A-Za-z]{2,}" required>
+                <input oninput="validation()" id="lname" type="text" pattern="[A-Za-z]{2,}">
                 <label for="lname">Last Name</label>
+                <div id="errorLname"></div>
             </section>
             <section>
                 <input oninput="validation()" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -35,6 +38,7 @@
                 <input oninput="validation()" id="vEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     required>
                 <label for="vEmail">Verify Email</label>
+                <div id="errorVemail"></div>
             </section>
             <section>
                 <input oninput="validation()" id="password" type="password" autocomplete="off"
