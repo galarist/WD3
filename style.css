@@ -4,7 +4,8 @@ form {
     padding: 10px;
     border-radius: 3px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border: 2px solid rgba(99, 99, 99, 0.2);;
+    border: 2px solid rgba(99, 99, 99, 0.2);
+    ;
 }
 
 h1 {
@@ -33,10 +34,79 @@ legend {
     border-radius: 3px;
 }
 
+section:first-of-type {
+    width: 32px;
+    text-align: center;
+}
+
+a:hover~video,
+video:hover {
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+
+video {
+    display: none;
+    z-index: 5;
+    border: 0;
+    outline: 0;
+    margin-top: -20px;
+    z-index: 0;
+}
+
 section {
     display: grid;
     display: -ms-grid;
-    grid-auto-flow: dense;
+}
+
+section input {
+    margin: 0;
+    height: 29px;
+    position: relative;
+    border: 2px solid rgb(199 199 199);
+    outline: 0;
+    padding-left: 38px;
+    border-radius: 3px;
+}
+
+section::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    min-height: 35px;
+    min-width: 35px;
+    z-index: 1;
+    background-color: rgb(199 199 199);
+    clear: both;
+    margin-top: 18px;
+    border-radius: 3px 0 0 3px;
+}
+
+section:nth-of-type(1):after {
+    display: none;
+}
+
+section:nth-of-type(2):after,
+section:nth-of-type(3):after {
+    background-image: url('img/svg/user.svg');
+}
+
+section:nth-of-type(4):after,
+section:nth-of-type(5):after {
+    background-image: url('img/svg/at.svg');
+}
+
+section:nth-of-type(6):after,
+section:nth-of-type(7):after {
+    background-image: url('img/svg/password.svg');
+}
+
+section:nth-of-type(8):after {
+    background-image: url('img/svg/check_mark.svg');
+    margin: 0;
+    margin-left: -2px;
 }
 
 section label {
@@ -48,8 +118,21 @@ section div {
     margin-bottom: 6px;
 }
 
-section input {
-    margin: 0;
+.inline_grid {
+    display: inline-grid;
+    display: -ms-grid;
+    align-items: center;
+    grid-template-rows: 31px;
+    border: 2px solid;
+    border-color: rgb(199 199 199);
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+section input[type="checkbox"] {
+    grid-row: 1;
+    justify-self: end;
+    margin-right: 5px;
 }
 
 input[type="submit"] {
@@ -58,19 +141,6 @@ input[type="submit"] {
     width: 160px;
     margin: 0 auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-.inline_grid {
-    display: inline-grid;
-    display: -ms-grid;
-    align-items: center;
-    grid-template-rows: 35px;
-}
-
-section input[type="checkbox"] {
-    grid-row: 1;
-    justify-self: end;
-    margin-right: 5px;
 }
 
 input:required+label::after {

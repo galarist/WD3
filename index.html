@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
     <script src="functions.js"></script>
     <title>Registration</title>
 </head>
@@ -18,6 +18,12 @@
         <hr>
         <fieldset>
             <legend>Details</legend>
+            <section>
+                <a href="" onclick="return false">Help</a>
+                <video width="172" height="310" controls class="youtube-video"
+                    data-yt="https://www.youtube.com/embed/YJWSAJjkTsI">
+                </video>
+            </section>
             <section>
                 <input oninput="validation()" id="fname" type="text" pattern="[A-Za-z]{2,}" required>
                 <label for="fname">First Name</label>
@@ -63,6 +69,16 @@
             <input type="submit" value="Register">
         </fieldset>
     </form>
+    <script>
+        const player = new YouTubeToHtml5({
+            selector: '.youtube-video',
+            attribute: 'data-yt',
+            autoload: false,
+            withAudio: true
+        });
+        // load video
+        player.load();
+    </script>
 </body>
 
 </html>
