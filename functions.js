@@ -1,4 +1,4 @@
-function validation() {
+function validation(e) {
     var nameRegex = /^[A-Z][a-z'-]{2,}$/;
     var emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
     var pwRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
@@ -14,7 +14,6 @@ function validation() {
     var emailVMsg = document.getElementById("errorVemail");
     var checkPW = document.getElementById("checkPW");
     var verifyPassword = document.getElementById("verifyPassword");
-
     if (nameRegex.test(fName) !== true && fName.length > 0) {
         fNameMsg.innerHTML = "Not correct name";
     } else {
@@ -39,7 +38,6 @@ function validation() {
             emailVMsg.innerHTML = "";
         }
     }
-
     if (pwRegex.test(pw1) !== true && pw1.length > 0) {
         checkPW.innerHTML = "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters";
     } else {
@@ -53,6 +51,10 @@ function validation() {
         } else {
             verifyPassword.innerHTML = "";
         }
+    }
+    if (document.getElementById('accept').checked) {
+        alert('checked');
+        return true;
     }
     return false;
 }
