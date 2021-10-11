@@ -75,12 +75,12 @@ section::after {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    min-height: 35px;
+    min-height: 33px;
     min-width: 35px;
     z-index: 1;
     background-color: rgb(199 199 199);
     clear: both;
-    margin-top: 18px;
+    margin-top: 12px;
     border-radius: 3px 0 0 3px;
 }
 
