@@ -25,29 +25,29 @@
                 </video>
             </section>
             <section>
-                <input oninput="validation()" id="fname" type="text" pattern="[A-Za-z]{2,}" required>
+                <input placeholder="First Name" oninput="validation()" id="fname" type="text" pattern="[A-Za-z]{2,}" required>
                 <label for="fname">First Name</label>
                 <div id="errorFname"></div>
             </section>
             <section>
-                <input oninput="validation()" id="lname" type="text" pattern="[A-Za-z]{2,}">
+                <input placeholder="Last Name" oninput="validation()" id="lname" type="text" pattern="[A-Za-z]{2,}">
                 <label for="lname">Last Name</label>
                 <div id="errorLname"></div>
             </section>
             <section>
-                <input oninput="validation()" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                <input placeholder="Email" oninput="validation()" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     required>
                 <label for="email">Email</label>
                 <div id="errorEmail"></div>
             </section>
             <section>
-                <input oninput="validation()" id="vEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                <input placeholder="Verify Email" oninput="validation()" id="vEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     required>
                 <label for="vEmail">Verify Email</label>
                 <div id="errorVemail"></div>
             </section>
             <section>
-                <input oninput="validation()" id="password" type="password" autocomplete="off"
+                <input placeholder="Password" oninput="validation()" id="password" type="password" autocomplete="off"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                     required>
@@ -55,7 +55,7 @@
                 <div id="checkPW"></div>
             </section>
             <section>
-                <input oninput="validation()" id="vPassword" type="password" autocomplete="off"
+                <input placeholder="Verify Password" oninput="validation()" id="vPassword" type="password" autocomplete="off"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                     required>

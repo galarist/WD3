@@ -37,6 +37,7 @@ legend {
 section:first-of-type {
     width: 32px;
     text-align: center;
+    margin: 6px 0;
 }
 
 a:hover~video,
@@ -75,12 +76,13 @@ section::after {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    min-height: 33px;
+    min-height: 35px;
     min-width: 35px;
     z-index: 1;
     background-color: rgb(199 199 199);
     clear: both;
     margin-top: 20px;
+    margin-top: 0;
     border-radius: 3px 0 0 3px;
 }
 
@@ -148,4 +150,48 @@ input:required+label::after {
     color: red;
 }
 
-@media (orientation: landscape) {}
+#fname {
+    margin-bottom: -6px;
+}
+
+input:not(input:required):not(input[type="submit"]),
+section:nth-of-type(3):after,
+section:nth-of-type(3) label,
+label{
+    display: none;
+}
+
+section:last-of-type label:last-child {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content;
+}
+
+@media (orientation: landscape) {
+    section,
+    label,
+    #lname,
+    section:nth-of-type(3):after,
+    section:nth-of-type(3) label{
+        display: grid;
+    }
+
+    section::after {
+        min-height: 33px;
+        margin-top: 20px;
+    }
+
+    #fname {
+        margin-bottom: auto;
+    }
+
+    label {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: max-content;
+    }
+
+    input:required+label::after {
+        content: " *";
+    }
+}
