@@ -14,6 +14,7 @@
 <body>
     <form onsubmit="return validation()">
         <hr>
+        <img src="img/logo.svg" alt="Newspaper logo">
         <h1>Registration</h1>
         <hr>
         <fieldset>
@@ -25,38 +26,39 @@
                 </video>
             </section>
             <section>
-                <input placeholder="First Name" oninput="validation()" id="fname" type="text" pattern="[A-Za-z]{2,}" required>
+                <input placeholder="First Name" oninput="validation()" id="fname" type="text" maxlength="40" pattern="[A-Za-z]{2,}"
+                    required>
                 <label for="fname">First Name</label>
                 <div id="errorFname"></div>
             </section>
             <section>
-                <input placeholder="Last Name" oninput="validation()" id="lname" type="text" pattern="[A-Za-z]{2,}">
+                <input placeholder="Last Name" oninput="validation()" id="lname" type="text" maxlength="40" pattern="[A-Za-z]{2,}">
                 <label for="lname">Last Name</label>
                 <div id="errorLname"></div>
             </section>
             <section>
-                <input placeholder="Email" oninput="validation()" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    required>
+                <input placeholder="Email" oninput="validation()" id="email" type="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 <label for="email">Email</label>
                 <div id="errorEmail"></div>
             </section>
             <section>
-                <input placeholder="Verify Email" oninput="validation()" id="vEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    required>
+                <input placeholder="Verify Email" oninput="validation()" id="vEmail" type="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 <label for="vEmail">Verify Email</label>
                 <div id="errorVemail"></div>
             </section>
             <section>
-                <input placeholder="Password" oninput="validation()" id="password" type="password" autocomplete="off"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                <input placeholder="Password" oninput="validation()" maxlength="40" id="password" type="password" autocomplete="off"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,40}"
                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                     required>
                 <label for="password">Password</label>
                 <div id="checkPW"></div>
             </section>
             <section>
-                <input placeholder="Verify Password" oninput="validation()" id="vPassword" type="password" autocomplete="off"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                <input placeholder="Verify Password" oninput="validation()" maxlength="40" id="vPassword" type="password"
+                    autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,40}"
                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                     required>
                 <label for="vPassword">Verify Password</label>

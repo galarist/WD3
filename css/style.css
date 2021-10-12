@@ -5,7 +5,12 @@ form {
     border-radius: 3px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border: 2px solid rgba(99, 99, 99, 0.2);
-    ;
+}
+
+form img {
+    width: 40%;
+    display: grid;
+    margin: 0 auto;
 }
 
 h1 {
@@ -157,7 +162,7 @@ input:required+label::after {
 input:not(input:required):not(input[type="submit"]),
 section:nth-of-type(3):after,
 section:nth-of-type(3) label,
-label{
+label {
     display: none;
 }
 
@@ -168,11 +173,12 @@ section:last-of-type label:last-child {
 }
 
 @media (orientation: landscape) {
+
     section,
     label,
     #lname,
     section:nth-of-type(3):after,
-    section:nth-of-type(3) label{
+    section:nth-of-type(3) label {
         display: grid;
     }
 
